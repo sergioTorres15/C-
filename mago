@@ -1,0 +1,201 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace mago
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, num, count;
+            String reply;
+            num = 0;
+
+
+            Console.WriteLine("El mago de 2\n");
+            Console.WriteLine("1 Tarjeta \n");
+            firstline(1);
+            firstline(3);
+            firstline(5);
+            firstline(7);
+            firstline(9);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 1;
+            }
+            Console.Clear();
+            Console.WriteLine("2 Tarjeta \n");
+            line(10);
+            lineTwo(7);
+            line(6);
+            lineTwo(3);
+            line(2);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 2;
+            }
+            Console.Clear();
+            Console.WriteLine("3 Tarjeta \n");          
+            third(4, 4, 13);
+            third(14, 2, 23);
+            third(28, 4, 37);
+            third(38, 2, 47);
+            third(52, 4, 60);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 4;
+            }
+            Console.Clear();
+            Console.WriteLine("4 Tarjeta \n");
+            four(13, 0, 8);
+            four(27, 4, 14);
+            four(41, 2, 28);
+            four(47, 0, 42);
+            four(60, 0, 56);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 8;
+            }
+            Console.Clear();
+            Console.WriteLine("5 Tarjeta \n");
+            four(21, 0, 16);
+            five(22, 0, 27);
+            five(28, 4, 49);
+            five(50, 0, 55);
+            five(56, 0, 60);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 16;
+            }
+            Console.Clear();
+            Console.WriteLine("6 Tarjeta \n");
+            four(37, 0, 32);
+            five(38, 0, 43);
+            four(49, 0, 44);
+            five(50, 0, 55);
+            four(60, 0, 56);
+            Console.Write("\n");
+            ask();
+            if (reply == "si")
+            {
+                num += 32;
+            }
+
+            Console.WriteLine("Procensando la magia......");
+            Thread.Sleep(2000);
+            Console.WriteLine($"EL numero que pensastes es {num}");
+            
+
+
+
+            //*********************FUNCIONES*************************
+
+            string ask()
+                {
+                   Console.WriteLine("El numero que pensaste ¿esta en esta carta?    [SI / NO]");
+                   reply = Console.ReadLine();
+                   return reply;
+                   }
+
+            void line(int j)
+            {
+                for (i = j; i <= 51; i += 11)
+                {
+                    Console.Write($"  {i} ");
+                    i += 9;
+                    Console.Write($"  {i} ");
+                }
+                Console.Write("\n");
+            }
+           void lineTwo(int j)
+            {
+                for (i = j; i <= 54; i += 9)
+                {
+                    Console.Write($"  {i} ");
+                    i += 11;
+                    Console.Write($"  {i} ");
+                }
+                Console.Write("\n");
+            }
+            void firstline(int j)
+            {
+                for (i = j; i <= 59; i += 10)
+                {
+                    Console.Write($"  {i} ");
+                }
+                Console.Write("\n");
+            }
+
+            void third(int j, int pos,int tope)
+            {
+                count = 0;
+                for (i = j; i <= tope; i++)
+                {
+                    count++;
+                    Console.Write($"  {i} ");
+                    if (count == pos)
+                    {
+                        i += 5;
+                        Console.Write($"  {i} ");
+                    }                   
+                }
+                Console.Write("\n");
+            }  
+      
+            void four(int j, int pos, int tope)
+            {
+                count = 0;
+                for (i = j; i >= tope; i--)
+                {
+                    count++;
+                    Console.Write($"  {i} ");
+                    if (count == pos)
+                    {
+                        i -= 9;
+                        Console.Write($"  {i} ");
+                    }
+                }
+                Console.Write("\n");
+            }
+            void five(int j,int pos, int tope)
+            {
+                count = 0;
+                for (i = j; i <= tope; i++)
+                {
+                    count++;
+                    Console.Write($"  {i} "); 
+                    if (count == pos)
+                    {
+                        i += 17;
+                        Console.Write($"  {i} ");
+                    }
+                   
+                }
+                Console.Write("\n");
+            }
+
+
+
+
+
+            Console.ReadKey();
+
+        }
+        
+
+    }
+}
