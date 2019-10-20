@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace El_mayor_de_N_numeros
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, mayor, x, i ;
+            Console.WriteLine("Cuantos numeros deseas comparar? : ");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresa el primer numero : ");
+            mayor = int.Parse(Console.ReadLine());  
+
+            for (i = 1; i < n; i++) 
+
+            {
+                Console.WriteLine($"Ingresa el numero " + (i+1));
+                x = int.Parse(Console.ReadLine()); 
+
+                if (mayor < x)
+                {
+                    mayor = x;
+                }
+            }
+
+            Console.WriteLine($"\nEl numero mayor es el = {mayor}");
+            Console.ReadKey();
+
+
+        }
+    }
+}
