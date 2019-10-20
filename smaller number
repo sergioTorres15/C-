@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace menor_a_numero
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, i,b;
+            Console.WriteLine("Introduce un numero : ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Los numero INPARES menores a {num1} son : \n"); 
+            for(i=1; i<num1;i++)
+            {
+                b = (2 * i) - 1; 
+
+                if (b < num1)
+                    Console.Write($"{b},");
+            }
+            Console.ReadKey();
+        }
+    }
+}
