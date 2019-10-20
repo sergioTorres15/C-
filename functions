@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace metodos
+{
+    class Program
+    {                                             // mandando a llamar un metodo(funcion)
+        static void Main(string[] args)
+        {
+             mensajeEnPantalla();
+        } 
+
+        static void mensajeEnPantalla()   //el metodo debe llevar statid si la funcion lleva void no tiene return no devuelve nada
+        {                                     //si va devolver algo cambiar el void por el tipo de dato que devolvera ejm. int,bouble
+            Console.WriteLine("Mensaje en pantalla");
+            Console.ReadKey();
+        }
+    }
+}
