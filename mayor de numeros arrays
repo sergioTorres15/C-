@@ -1,0 +1,110 @@
+using System;
+namespace Mayores_num_ordenados
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int num1, num2, num3;
+            int[] arreglo = new int[3];
+
+            Console.WriteLine("Introduce un numero : ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce otro numero :");
+            num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Intrduce otro numero : ");
+            num3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n");
+
+            if (num1 < num2)
+            {
+                if (num2 < num3)
+                {
+                    arreglo[0] = num1;
+                    arreglo[1] = num2;
+                    arreglo[2] = num3;
+
+                    Console.WriteLine("El orden de los numeros es : "); 
+                    for (int i = 0; i < arreglo.Length; i++)
+                    {
+                        Console.Write(arreglo[i]+" ");
+                    }
+                  
+                } 
+                else
+                {
+                    if (num1 < num3)
+                    {
+                        arreglo[0] = num1;
+                        arreglo[1] = num3;
+                        arreglo[2] = num2;
+                        Console.WriteLine("El orden de los numeros es : ");
+                        for (int i = 0; i < arreglo.Length; i++)
+                        {
+                            Console.Write(arreglo[i] + " ");
+
+                        }
+                    }
+                    else
+                    {
+                        arreglo[0] = num3;
+                        arreglo[1] = num1;
+                        arreglo[2] = num2;
+                        Console.WriteLine("El orden de los numeros es : ");
+                        for (int i = 0; i < arreglo.Length; i++)
+                        {
+                            Console.Write(arreglo[i] + " ");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (num1 < num3)
+                {
+                    arreglo[0] = num2;
+                    arreglo[1] = num1;
+                    arreglo[2] = num3;
+                    Console.WriteLine("El orden de los numeros es : ");
+                    for (int i = 0; i < arreglo.Length; i++)
+                    {
+                        Console.Write(arreglo[i] + " ");
+                    }
+
+                }
+                else 
+                {
+                    if (num2 < num3)
+                    {
+                        arreglo[0] = num2;
+                        arreglo[1] = num3;
+                        arreglo[2] = num1;
+                        Console.WriteLine("El orden de los numeros es : ");
+                        for (int i = 0; i < arreglo.Length; i++)
+                        {
+                            Console.Write(arreglo[i] + " ");
+                        }
+                    }
+                    else
+                    {
+                        arreglo[0] = num3;
+                        arreglo[1] = num2;
+                        arreglo[2] = num1;
+                        Console.WriteLine("El orden de los numeros es : ");
+                        for (int i = 0; i < arreglo.Length; i++)
+                        {
+                            Console.Write(arreglo[i] + " ");
+                        }
+                    }
+                       
+                    
+                }
+            }
+            Console.ReadKey();
+
+        }
+        
+        
+    }
+}
