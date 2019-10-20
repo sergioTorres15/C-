@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace añoBiciesto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int year;
+            Console.WriteLine("Ingrese un año : ");
+            year = int.Parse(Console.ReadLine());
+
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            {
+
+                Console.WriteLine($"El año {year} es BICIESTO");
+            }
+
+            else
+            {
+                Console.WriteLine($"El año {year} NO es biciesto");
+            }
+
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
