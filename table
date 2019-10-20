@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace diagramas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, i, b;
+            Console.WriteLine("Que tabla deseas mostrar : ");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine($"La tabla del {n} es \n");
+
+            for (i = 1; i < 11; i++)
+            {
+                b = n * i;
+                Console.WriteLine($"{n} * {i}\t= {b} ");
+            }
+            Console.ReadKey();
+        }
+
+    }
+}
