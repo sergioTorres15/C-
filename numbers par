@@ -1,0 +1,28 @@
+using System;
+
+
+namespace DiagramaPar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1;
+            Console.WriteLine("Introduce un numero :" );
+            num1 = int.Parse(Console.ReadLine());
+
+
+            if (num1 % 2 == 0)
+            {
+                Console.WriteLine($"El numero {num1} es PAR");
+                Console.ReadKey();
+
+            }
+            else { Console.WriteLine($"El numero {num1} NO es par");
+                Console.ReadKey(); 
+            }
+
+
+        }
+    }
+}
