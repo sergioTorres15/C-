@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace clase_progra
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            int yearYesterday;
+            int yearCurrent;
+            int edad;
+
+            Console.WriteLine("¿Cual es tu nombre : ");
+            name = Console.ReadLine();
+            Console.WriteLine("En que año naciste : ");
+            yearYesterday = int.Parse(Console.ReadLine());
+            Console.WriteLine("Que año es actualmente? : ");
+            yearCurrent = int.Parse(Console.ReadLine());
+
+            edad = (yearCurrent - yearYesterday);
+            if (edad >= 0 && edad <= 5)
+            {
+                Console.WriteLine($"\n{name} tu edad es de  {edad} años eres un BEBE");
+            }
+
+            else if (edad > 5 && edad <= 13)
+            {
+                Console.WriteLine($"{name} tu edad es de  {edad} años eres un ADOLECENTE");
+            }
+            else if (edad > 13 && edad <= 17)
+            {
+                Console.WriteLine($"{name} tu edad es de  {edad} años eres un JOVEN");
+            }
+            else if (edad >= 18 && edad <= 60)
+            {
+                Console.WriteLine($"{name} tu edad es de  {edad} años eres un ADULTO");
+            }
+            else if (edad > 60 && edad <= 120)
+            {
+                Console.WriteLine($"{name} tu edad es de  {edad} años eres un ANCIANO");
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
