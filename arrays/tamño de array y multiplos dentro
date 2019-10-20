@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace arrays2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Console.WriteLine("Que tamaño quieres el array? : ");
+            int tamaño = int.Parse(Console.ReadLine());
+            Console.WriteLine("que numero quieres sus multiplos? : ");
+            int multiplo = int.Parse(Console.ReadLine());
+            multiplos(tamaño, multiplo);       
+            Console.ReadKey();
+        } 
+        /*******************funcion**************************/
+        static void multiplos(int tamaño,int multiplo)
+        { int count = 1;
+            int[] array;
+            int multiplo_date;
+            array = new int[tamaño];
+
+            for (int i = 0; i < tamaño; i++) 
+            {
+                multiplo_date = multiplo*count;
+                count += 1; 
+                array[i] = multiplo_date;
+                                       
+            }
+            foreach (int dato in array)
+            {
+                Console.WriteLine($"Dato encontrado = {dato}  En la pos = {count}");
+                count += 1;
+            }
+        }
+    }
+}
