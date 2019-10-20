@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace numero_primo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, i, b,c;
+            c = 0;
+            Console.WriteLine("Introduce un numero : " );
+            num = int.Parse(Console.ReadLine()); 
+
+            for (i =1; i<=num; i++)
+            {
+                b = num % i; 
+                if (b ==0)
+                {
+                    c += 1;
+                }
+            } 
+            if(c == 2)
+            {
+                Console.WriteLine($"El numero {num} es primo");
+            }
+            else
+            {
+                Console.WriteLine($"El numero {num} no es primo");
+            }
+            Console.ReadKey();
+        }
+    }
+}
