@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace calculadora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int option, num1, num2, result;
+            string menu;
+            bool salida;
+            salida = false;
+
+            while (salida == false)
+            {
+                Console.WriteLine("Elige una Opcion \n(1)Suma / (2)resta / (3)Multiplicacion / (4)Division / (5)salir : ");
+                option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("\nSUMA\n\nIntroduce un numero : ");
+                        num1 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce otro numero : ");
+                        num2 = int.Parse(Console.ReadLine());
+                        result = num1 + num2;
+                        Console.WriteLine($"El resultado es : {result}\n");
+                        break;
+                    case 2:
+                        Console.WriteLine("\nRESTA\n\nIntroduce un numero : ");
+                        num1 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce otro numero : ");
+                        num2 = int.Parse(Console.ReadLine());
+                        result = num1 - num2;
+                        Console.WriteLine($"El resultado es : {result}\n");
+                        break;
+                    case 3:
+                        Console.WriteLine("\nMULTIPLICACION\n\nIntroduce un numero : ");
+                        num1 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce otro numero : ");
+                        num2 = int.Parse(Console.ReadLine());
+                        result = num1 * num2;
+                        Console.WriteLine($"El resultado es : {result}\n");
+                        break;
+                    case 4:
+                        Console.WriteLine("\nMULTIPLICACION\n\nIntroduce un numero : ");
+                        num1 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce otro numero : ");
+                        num2 = int.Parse(Console.ReadLine());
+                        result = num1 / num2;
+                        Console.WriteLine($"El resultado es : {result}\n");
+
+                        break;
+
+
+                }
+                Console.WriteLine("Quieres volver al menu? : si / no");
+                menu = Console.ReadLine();
+                if (menu == "no")
+                {
+                    salida = true;
+
+                }
+            }
+
+            
+         Console.WriteLine("ADIOS :3");
+         Console.ReadKey();
+
+        }
+       
+
+    }
+}  
