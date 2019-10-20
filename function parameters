@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace metodos_2
+{
+    class Program
+    {
+        static void Main(string[] args)    //metodo(funcion) pasando dos parametros
+        {
+            suma(5,8);
+        } 
+        static void suma(int num1, int num2)
+        {
+            Console.WriteLine($"La suma de los numeros es {num1 + num2}");
+            Console.ReadKey();
+        }
+    }
+}
