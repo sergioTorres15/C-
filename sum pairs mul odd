@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace diagramas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, n, x, i, suma, z, multi;
+            x = 0;
+            z = 1;
+            Console.WriteLine("Cuantos numeros desea ingresar : ");
+            n = int.Parse(Console.ReadLine());
+
+            for (i = 1; i <= n; i++)
+            {
+
+                Console.WriteLine($"Ingresa el numero {i} : ");
+                num1 = int.Parse(Console.ReadLine());
+
+                if (num1 % 2 == 0)
+                {
+                    suma = x + num1;
+                    x = suma;
+                }
+                else
+                {
+                    multi = z * num1;
+                    z = multi;
+                }
+            }
+            Console.WriteLine("La suma de los  PARES es " + x);
+            Console.WriteLine("La multiplicacion de los numeros INPARES es " + z);
+            Console.ReadKey();
+        }
+    }
+}
